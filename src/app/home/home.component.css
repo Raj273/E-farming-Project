@@ -1,0 +1,20 @@
+.background {
+  background-image: url('../about/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.homet {
+  color: black;
+  text-align: center;
+  font-size: xx-large;
+  font-style: initial;
+  font-weight: bolder;
+}
+
+.homer {
+  color: black;
+  text-align: center;
+  font-size: x-large;
+  font-style: italic;
+}

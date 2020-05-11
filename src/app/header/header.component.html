@@ -1,0 +1,30 @@
+<mat-toolbar color="accent">
+  <span class="texteditor">E-FARMING <br>
+  Fall in love with the farming!!!</span>
+</mat-toolbar>
+<mat-toolbar color="primary">
+  <span>
+    <a mat-raised-button color="primary" routerLink="/list">POSTS</a>
+  </span>
+  <span class="spacer"></span>
+  <ul>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-raised-button color="primary" routerLink="/">Home</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <a mat-raised-button color="primary" routerLink="/create" routerLinkActive="mat-warn">ADD NEW POST</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-raised-button color="primary" routerLink="/login" routerLinkActive="mat-warn">Login</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a mat-raised-button color="primary" routerLink="/signup" routerLinkActive="mat-warn">Sign Up</a>
+    </li>
+    <li>
+      <a mat-raised-button color="primary" routerLink="/tips" routerLinkActive="mat-warn">Basic tips</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button mat-raised-button color="primary" (click)="onLogout()">Logout</button>
+    </li>
+  </ul>
+</mat-toolbar>
